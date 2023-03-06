@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb}
+\pagestyle{empty}
+
+\begin{document}
+
+\section{Homogeneous Linear Second-Order ODE's with Constant Coefficients}
+
+We have the equation $ay'' + by' + cy = 0~(1)$, where a, b, c are constants.
+\\
+Thereom: If $y_1(x)$ and $y_2(x)$ are any two solutions of 
+$(1)$ and if $C_1$ and $C_2$ are arbitraty constants, then
+$C_1y_1(x) + C_2y_2(x)$ is the general solution of $(1)$.
+\\
+Consider: $y' + ay = 0$, where $a$ is a constant, we can derive:
+$$y'+ ay = 0$$
+$$y' = -ay$$
+$$\frac{dy}{dx} = -ay$$
+$$\frac{dy}{y} = -adx$$
+$$\int{\frac{dy}{y}} = \int{-adx}$$
+$$\ln{y} = -ax + C$$
+$$y = Ae^{-ax},~A = e^C$$
+Question: Whether exponentioal solutions exist for homogeneous linear
+second-order ODE's.
+\\
+Solution of $ay'' + by' + cy = 0~(1)$:
+\\
+If we try a solution of the form $y=e^{,x},~m\in\mathbb{R}$ we get
+$y' = me^{mx}$ and $y'' = m^2e^{mx}$.  Now we substitute $y' = me^{mx}$
+and $y'' = m^2e^{mx}$ into $(1)$ to get
+$a(m^2e^{mx}) + b(me^{mx}) + ce^{mx} = 0~(2)$ or
+$e^{mx}(am^2 + bm + c) = 0$.  We have $e^{mx} \neq 0$ for all values of
+$x$ and $m$, so $(2)$ is $0$ when $am^2 + bm + c = 0$.  This equation is
+called the auxillary equation of $(1)$.
+\\
+We can solve for $m$ with the quadratic formula: 
+$m = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
+\\
+We now have three cases: $b^2 - 4ac > 0$, $b^2 - 4ac = 0$, and 
+$b^2 - 4ac < 0$
+\\
+\subsection{Case 1}
+If $b^2 - 4ac > 0$, then equation $(2)$ has two distinct real solutions $m_1$
+and $m_2$.  Corresponding, equation $(1)$ has two basic solutions:
+$y_1(x) = e^{m_1x}$ and $y_2(x) = e^{m_2x}$.  The complete solution of $(1)$
+is: $y(x) = C_1e^{m_1x} + C_2e^{m_2x}$.
+
+\subsubsection{Example 1}
+Given $y'' + 5y' + 6 = 0$, we have the equation $m^2 + 5m + 6 = 0$.  We can
+solve for $m$.
+$$m^2 + 5m + 6 = 0$$
+$$(m + 2)(m + 3) = 0$$
+$$m_1 = -2,~m_2 = -3$$
+And now solving for $y$ we find that, $y(x) = C_1e^{3x} + C_2e^{-3x}$
+
+\subsubsection{Example 2}
+Given $2y'' - 5y' -3y = 0$, we have $2m^2 - 5m - 3 = 0$,
+$$m = \frac{-(-5) \pm \sqrt{(-5)^2 - 4ac}}{2(2)}$$
+$$m_1 = 3,~m_2 = -\frac{1}{2}$$
+$$y(x) = C_1e^{3x} + C_2e^{-\frac{x}{2}}$$
+
+
+\end{document}
