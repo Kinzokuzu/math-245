@@ -52,7 +52,8 @@ solve for $m$.
 $$m^2 + 5m + 6 = 0$$
 $$(m + 2)(m + 3) = 0$$
 $$m_1 = -2,~m_2 = -3$$
-And now solving for $y$ we find that, $y(x) = C_1e^{3x} + C_2e^{-3x}$
+And now solving for $y$ we find:
+$$y(x) = C_1e^{3x} + C_2e^{-3x}$$
 
 \subsubsection{Example 2}
 Given $2y'' - 5y' -3y = 0$, we have $2m^2 - 5m - 3 = 0$,
@@ -60,5 +61,26 @@ $$m = \frac{-(-5) \pm \sqrt{(-5)^2 - 4ac}}{2(2)}$$
 $$m_1 = 3,~m_2 = -\frac{1}{2}$$
 $$y(x) = C_1e^{3x} + C_2e^{-\frac{x}{2}}$$
 
+\subsection{Case 2}
+If $b^2 - 4ac = 0$, then we have one real soution of $m$.  In this case, the
+basic soultions for $(1)$ are: $y_1(x) = e^{mx},~y_2(x)xe^{mx}$.  The
+complete soultion is: $y(x) = C_1e^{mx} + C_2xe^{mx}$.
+
+\subsubsection{Example 3}
+Given $y'' + 6y' + 9y = 0$, we have $m^2 + 6m + 9 = 0$.  Solving for $m$:
+$$m^2 + 6m + 9 = 0$$
+$$(m + 3)^2 = 0$$
+$$m = 3$$
+Solving for $y$ we get:
+$$y(x) = C_1e^{-3x} + C_2xe^{-3x}$$
+
+\subsubsection{Example 4}
+$$y'' - 10y' +25y = 0''$$
+\center{we have:}
+$$m^2 - 10m + 25 = 0$$
+$$(m - 5)^2 = 0$$
+$$m = 5$$
+\center{Therefore,}
+$$y(x) = C_1e^{5x} + C_2xe^{5x}$$
 
 \end{document}
